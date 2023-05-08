@@ -4,10 +4,10 @@
 This directory holds the first project we are doing under the **Higher Level Programming** phase in **ALX SE PROGRAM - C12**
 
 
-##Learning Objectives
+## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-##General
+## General
 Why Python programming is awesome
 Who created Python
 Who is Guido van Rossum
@@ -20,9 +20,9 @@ What are indexing and slicing in Python
 What is the official Python coding style and how to check your code with pycodestyle
 
 
-#Requirements
+## Requirements
 
-##Python Scripts
+## Python Scripts
 - Allowed editors: vi, vim, emacs
 - All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
 - All your files should end with a new line
@@ -34,7 +34,7 @@ What is the official Python coding style and how to check your code with pycodes
 - The length of your files will be tested using wc
 
 
-##Shell Scripts
+## Shell Scripts
 - Allowed editors: vi, vim, emacs
 - All your scripts will be tested on Ubuntu 20.04 LTS
 - All your scripts should be exactly two lines long (wc -l file should print 2)
@@ -43,7 +43,7 @@ What is the official Python coding style and how to check your code with pycodes
 - All your files must be executable
 
 
-##C Scripts
+## C Scripts
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 - All your files should end with a new line
