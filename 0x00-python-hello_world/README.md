@@ -1,4 +1,4 @@
-#			0x00 - HELLO WORLD (PYHTON)
+#			0x00 - HELLO WORLD (PYTHON)
 ##		       Sprint 2 (C12)- 8th May, 2023
 
 This directory holds the first project we are doing under the **Higher Level Programming** phase in **ALX SE PROGRAM - C12**
