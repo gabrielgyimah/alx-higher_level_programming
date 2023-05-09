@@ -7,18 +7,17 @@ if number < 0:
     number = number * -1
     negative_flag = 1
 
-last_digit = number % 10
+_digit = number % 10
 
 if negative_flag == 1:
-    last_digit *= -1
+    _digit *= -1
     number *= -1
 
-if last_digit > 5:
-    print(f"Last digit of {number} is {last_digit} and is greater than 5")
+if _digit > 5:
+    print(f"Last digit of {number} is {_digit} and is greater than 5")
 
-elif last_digit < 6 and last_digit != 0:
-    print(f"Last digit of {number} is {last_digit}\
-and is less than 6 and not 0")
+elif _digit < 6 and _digit != 0:
+    print(f"Last digit of {number} is {_digit} and is less than 6 and not 0")
 
 else:
-    print(f"Last digit of {number} is {last_digit} and is 0")
+    print(f"Last digit of {number} is {_digit} and is 0")
