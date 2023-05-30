@@ -9,4 +9,5 @@ class Square:
 
 
     def __init__(self, size) -> None:
+	"""Initialitizing instances of the square class"""
         self.__size = size
