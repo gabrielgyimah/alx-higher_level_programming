@@ -36,9 +36,8 @@ class Square:
     def my_print(self):
         """prints the string representation of the instance"""
         if self.__size == 0:
-            pass
-        else:
-            for i in range (self.size):
-                s = '#' * self.size
-                print(s)
-        print()
+            print()
+            return
+        for i in range(self.size):
+            s = '#' * self.size
+            print(s)
