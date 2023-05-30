@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
 
-"""Defines a new template of type square"""
+"""creates a new type of type  Square."""
 
 
 class Square:
-    """The deinition of class Square"""
+    """creates a new instance"""
 
-
-    def __init__(self, size) -> None:
-	"""Initialitizing instances of the square class"""
+    def __init__(self, size):
+        """Initialize instances of the square class"""
         self.__size = size
