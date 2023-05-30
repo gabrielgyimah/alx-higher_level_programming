@@ -1,7 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
-"""Defines a template or creating and interfacing square objects"""
+
+"""defines a new template of type  Square"""
+
 
 class Square:
-    """Defines the template"""
+    """defines a new template of type  Square"""
+
     pass
