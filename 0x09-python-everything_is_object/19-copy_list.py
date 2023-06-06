@@ -1,3 +1,3 @@
-#!/usr/python3
-def copy_list(ar):
-    return ar[:]
+#!/usr/bin/python3
+def copy_list(arr):
+    return arr[:]
