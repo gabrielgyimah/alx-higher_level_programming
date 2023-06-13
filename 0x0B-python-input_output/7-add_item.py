@@ -22,7 +22,7 @@ def add_item():
     try:
         my_list = load_from_json_file("add_item.json")
     except Exception:
-        my_list = save_to_json_file(my_list, "add_item.json")
+        save_to_json_file(my_list, "add_item.json")
 
     if len(sys.argv) < 2:
         return
