@@ -1,4 +1,4 @@
-#!/usr/bin/ptyhon3
+#!/usr/bin/python3
 
 """Adds all command line args to a list"""
 import sys
