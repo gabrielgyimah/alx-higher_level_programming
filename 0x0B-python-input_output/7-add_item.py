@@ -18,19 +18,14 @@ def add_item():
     """
 
     my_list = []
-
     try:
         my_list = load_from_json_file("add_item.json")
     except Exception:
         save_to_json_file(my_list, "add_item.json")
-
     if len(sys.argv) < 2:
         return
-
-    for item in sys.argv:
-        if item is sys.argv[0]:
-            continue
-        my_list.append(item)
+    for i in range(1, len(sys.argv)):
+        my_list.append(sys.argv[i])
 
     save_to_json_file(my_list, "add_item.json")
 
