@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
-"""
-A function that adds a new attribute to an "
-object if it’s possible
-"""
+"""A function that adds a new attribute to an object"""
 
 def add_attribute(object, name, value):
     """
