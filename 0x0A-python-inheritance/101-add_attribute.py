@@ -2,6 +2,7 @@
 
 """A function that adds a new attribute to an object"""
 
+
 def add_attribute(object, name, value):
     """
     1. Raise a TypeError exception, with the message <can't
