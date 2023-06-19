@@ -1,28 +1,28 @@
 #!/usr/bin/python3
 
-"""Square Module."""
+"""Square Module"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represent an class of type Square."""
+    """Create square instances"""
 
     def __init__(self, size, x=0, y=0, id=None) -> None:
-        """Initialize a new object of type Square."""
+        """Initialize instances of the Square class"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self) -> str:
-        """Return the string representation of Square."""
+        """Returns the string representation of a Square instance"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
-        """Get the value of the instance field size."""
+        """Getter or size"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """Set the value of the instance field size."""
+        """Setter for size"""
         self.width = value
         self.height = value
 
@@ -48,6 +48,6 @@ class Square(Rectangle):
                     setattr(self, k, v)
 
     def to_dictionary(self):
-        """Return the dictionary representation of an object of type Square."""
+        """Return the dictionary representation of an object of type Square"""
         keys = ['id', 'x', 'y', 'size']
         return dict((k, getattr(self, k)) for k in dir(self) if k in keys)
