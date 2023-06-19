@@ -17,12 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Get the value of the private instance field width."""
+        """Getter for instance with"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set the value of the private instance field width."""
+        """Setter for instance width"""
         if not type(value) is int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -31,12 +31,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Get the value of the private instance field height."""
+        """Getter for instance height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set the value of the private instance field height."""
+        """Settter for instance height"""
         if not type(value) is int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -45,12 +45,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Get the value of the private instance field x."""
+        """Getter for instance field x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """Set the value of the private instance field x."""
+        """Setter or instance field height"""
         if not type(value) is int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -59,12 +59,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Get the value of the private instance field y."""
+        """Getter for instance field y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Set the value of the private instance field y."""
+        """Setter for instance field y"""
         if not type(value) is int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -72,23 +72,23 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Compute and return the area of a rectangle."""
+        """Computes and return the area of a rectangle"""
         return self.__height * self.__width
 
     def display(self):
-        """Print the shape of the rectangle."""
+        """Prints the shape representation of the rectangle"""
         [print() for _ in range(self.__y)]
         for _ in range(self.__height):
             print(' ' * self.__x, end='')
             print('#' * self.__width)
 
     def __str__(self) -> str:
-        """Return the string representation of a rectangle object."""
+        """Return the string representation of a rectangle instance"""
         size = f" - {self.__width}/{self.__height}"
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}{size}"
 
     def update(self, *args, **kwargs):
-        """Update rectangle using arg-var."""
+        """Update rectangle usings"""
         if args and len(args) > 0:
             for i, v in enumerate(args):
                 if i == 0:
@@ -107,6 +107,6 @@ class Rectangle(Base):
                 setattr(self, k, v)
 
     def to_dictionary(self):
-        """Return the dictionary representation of an object."""
+        """Return the dictionary representation of an object"""
         keys = ['id', 'width', 'height', 'x', 'y']
         return dict((k, getattr(self, k)) for k in dir(self) if k in keys)
