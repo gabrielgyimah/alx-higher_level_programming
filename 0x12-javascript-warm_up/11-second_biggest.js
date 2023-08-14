@@ -5,21 +5,19 @@ let secondBiggest = 0;
 let counter = 2;
 
 if ((process.argv.length - 2) < 2) {
-    console.log(0);
-}
-else {
-    while(counter < process.argv.length) {
-        let num = parseInt(process.argv[counter]);
+  console.log(0);
+} else {
+  while (counter < process.argv.length) {
+    const num = parseInt(process.argv[counter]);
 
-        if (num > firstBiggest) {
-            secondBiggest = firstBiggest;
-            firstBiggest = num;
-        }
-        else if (num > secondBiggest && num < firstBiggest) {
-            secondBiggest = num;
-        }
-        
-        counter++;
+    if (num > firstBiggest) {
+      secondBiggest = firstBiggest;
+      firstBiggest = num;
+    } else if (num > secondBiggest && num < firstBiggest) {
+      secondBiggest = num;
     }
-    console.log(secondBiggest);
+
+    counter++;
+  }
+  console.log(secondBiggest);
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
 exports.addMeMaybe = (n, printFunc) => {
-    n++;
-    printFunc(n);
+  n++;
+  printFunc(n);
 };
