@@ -1,27 +1,27 @@
 #!usr/bin/node
 
 class Rectangle {
-    w;
-    h;
+  w;
+  h;
 
-    constructor(w, h) {
-        if (w < 1 || w === undefined || h < 1 || h === undefined) {
-            const emptyRect = class Rectangle {};
-            return new emptyRect();
-        }
-
-        this.width = w;
-        this.height = h;
+  constructor (w, h) {
+    if (w < 1 || w === undefined || h < 1 || h === undefined) {
+      const emptyRect = class Rectangle {};
+      return new emptyRect();
     }
 
-    print() {
-        let counter = 0;
+    this.width = w;
+    this.height = h;
+  }
 
-        while (counter < this.height) {
-            console.log(`X`.repeat(this.width));
-            counter++;
-        }
+  print () {
+    let counter = 0;
+
+    while (counter < this.height) {
+      console.log('X'.repeat(this.width));
+      counter++;
     }
+  }
 }
 
 module.exports = Rectangle;

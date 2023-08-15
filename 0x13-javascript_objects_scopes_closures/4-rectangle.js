@@ -1,38 +1,38 @@
 #!usr/bin/node
 
 class Rectangle {
-    w;
-    h;
+  w;
+  h;
 
-    constructor(w, h) {
-        if (w < 1 || w === undefined || h < 1 || h === undefined) {
-            const emptyRect = class Rectangle {};
-            return new emptyRect();
-        }
-
-        this.width = w;
-        this.height = h;
+  constructor (w, h) {
+    if (w < 1 || w === undefined || h < 1 || h === undefined) {
+      const emptyRect = class Rectangle {};
+      return new emptyRect();
     }
 
-    print() {
-        let counter = 0;
+    this.width = w;
+    this.height = h;
+  }
 
-        while (counter < this.height) {
-            console.log(`X`.repeat(this.width));
-            counter++;
-        }
-    }
+  print () {
+    let counter = 0;
 
-    rotate() {
-        const tempWidth = this.width;
-        this.width = this.height;
-        this.height = tempWidth;
+    while (counter < this.height) {
+      console.log('X'.repeat(this.width));
+      counter++;
     }
+  }
 
-    double() {
-        this.width = this.width * 2;
-        this.height = this.height * 2;
-    }
+  rotate () {
+    const tempWidth = this.width;
+    this.width = this.height;
+    this.height = tempWidth;
+  }
+
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
 }
 
 module.exports = Rectangle;
