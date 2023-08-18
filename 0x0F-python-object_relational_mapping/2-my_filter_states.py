@@ -13,12 +13,10 @@ def main():
             port=3306)
     cursor = conn.cursor()
 
-    query = """
-    SELECT * FROM states WHERE BINARY name=%s ORDER BY states.id
-    """
-
-    name_to_search = sys.argv[4]
-    cursor.execute(query, name_to_search)
+    cursor.execute("""
+    SELECT * FROM states WHERE BINARY
+    name LIKE '{}' ORDER BY states.id
+    """.format(sys.argv[4]))
 
     states = cursor.fetchall()
 
