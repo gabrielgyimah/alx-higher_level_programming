@@ -10,7 +10,9 @@ database = sys.argv[3]
 host = 'localhost'
 port = 3306
 
-conn = MySQLdb.connect(host=host, user=user, passwd=password, db=database, port=port)
+conn = MySQLdb.connect(host=host, user=user,
+                       passwd=password, db=database, port=port
+                       )
 
 cursor = conn.cursor()
 
