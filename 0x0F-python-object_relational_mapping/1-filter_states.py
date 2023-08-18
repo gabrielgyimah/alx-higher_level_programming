@@ -18,11 +18,11 @@ def main():
 
     query = """
                 SELECT * FROM states
-                WHERE name LIKE %s
+                WHERE BINARY name LIKE UPPER('N%')
                 ORDER BY states.id
     """
-    like_pattern = ('N%',)
-    cursor.execute(query, like_pattern)
+
+    cursor.execute(query)
     states = cursor.fetchall()
 
     for state in states:
