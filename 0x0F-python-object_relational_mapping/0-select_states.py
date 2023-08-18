@@ -18,7 +18,7 @@ def main():
 
     cursor = conn.cursor()
 
-    query = 'SELECT * FROM states ORDER BY id ASC'
+    query = 'SELECT * FROM states ORDER BY states.id'
     cursor.execute(query)
     states = cursor.fetchall()
 
