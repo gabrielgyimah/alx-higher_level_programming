@@ -14,11 +14,11 @@ def main():
     cursor = conn.cursor()
 
     query = """
-    SELECT * FROM states WHERE name=%s ORDER BY states.id
+    SELECT * FROM states WHERE BINARY name=%s ORDER BY states.id
     """
 
     name_to_search = sys.argv[4]
-    cursor.execute(query, (name_to_search,))
+    cursor.execute(query, name_to_search)
 
     states = cursor.fetchall()
 
