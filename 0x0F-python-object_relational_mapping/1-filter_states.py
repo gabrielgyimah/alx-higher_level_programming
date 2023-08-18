@@ -16,12 +16,20 @@ def main():
             )
     cursor = conn.cursor()
 
-    query = ('SELECT * FROM states WHERE name LIKE \'N%\' ORDER BY states.id')
-    cursor.execute(query)
+    query = """
+                SELECT * FROM states
+                WHERE name LIKE %s
+                ORDER BY states.id
+    """
+    like_pattern = ('N%',)
+    cursor.execute(query, like_pattern)
     states = cursor.fetchall()
 
     for state in states:
         print(state)
+
+    cursor.close()
+    conn.close()
 
 
 if __name__ == '__main__':
