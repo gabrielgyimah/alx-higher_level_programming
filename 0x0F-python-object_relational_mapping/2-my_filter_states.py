@@ -14,7 +14,7 @@ def main():
             )
     cursor = conn.cursor()
 
-    query = f"""
+    query = """
     SELECT * FROM states WHERE name=%s
     """
 
