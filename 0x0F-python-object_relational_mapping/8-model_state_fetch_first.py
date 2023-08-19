@@ -15,7 +15,7 @@ def main():
     Base.metadata.create_all(engine)
     session = Session(engine)
 
-    q_res = session.query(State).first()
+    q_res = session.query(State).order_by(State.id).first()
 
     if (q_res):
         print(f'{q_res.id}: {q_res.name}')
