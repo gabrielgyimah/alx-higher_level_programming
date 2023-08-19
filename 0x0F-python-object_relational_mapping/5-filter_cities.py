@@ -12,20 +12,20 @@ def main():
             port=3303)
     cursor = conn.cursor()
 
-    query = """
+    cursor.execute("""
     SELECT cities.name FROM cities
-    INNER JOIN states ON cities.state_id=states.id
-    WHERE states.name=%s ORDER BY cities.id
-    """
+    INNER JOIN states ON cities.state_id = states.id
+    WHERE states.name = %(sname)s
+    ORDER BY cities.id
+    """, {'sname': sys.argv[4]})
 
-    cursor.execute(query, (sys.argv[4],))
     cities = cursor.fetchall()
 
     for city in cities:
-        print(city, end='')
+        print(city[0], end='')
 
         if city != cities[-1]:
-            print(',')
+            print(', ', end='')
     print()
 
     cursor.close()
