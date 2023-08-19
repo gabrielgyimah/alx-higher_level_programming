@@ -16,7 +16,7 @@ def main():
     session = Session()
 
     q_res = session.query(State).first()
-    print('1: ' + q_res.name)
+    print(f'{q_res.id}: {q_res.name}')
 
 
 if __name__ == '__main__':
