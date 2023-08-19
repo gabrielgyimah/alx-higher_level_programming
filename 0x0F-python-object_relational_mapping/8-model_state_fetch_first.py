@@ -22,6 +22,8 @@ def main():
 
     if (q_res):
         print(f'{q_res.id}: {q_res.name}')
+    else:
+        print('Nothing')
 
 
 if __name__ == '__main__':
