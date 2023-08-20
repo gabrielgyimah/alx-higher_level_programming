@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """lists all State objects that contain the letter a"""
 
-from model_state import State
+from model_state import State, Base
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm.session import Session
@@ -15,7 +15,8 @@ def main():
 
     engine = create_engine(
             f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
-    session = Session(bind=engine)
+    Base.metadata.create_all(engine)
+    session = Session(engine)
 
     states = (session.query(State)
               .filter(State.name.like('%a%'))
