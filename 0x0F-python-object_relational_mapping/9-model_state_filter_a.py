@@ -17,7 +17,9 @@ def main():
             f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
     session = Session(bind=engine)
 
-    states = session.query(State).filter(State.name.like('%a%'))
+    states = (session.query(State)
+              .filter(State.name.like('%a%'))
+              .order_by(State.id))
     counter = 1
     for state in states:
         print(f'{counter}: {state.name}')
