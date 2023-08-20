@@ -4,15 +4,10 @@
 from model_state import State, Base
 from sys import argv
 from sqlalchemy import create_engine
-from sqlalchemy.orm.session import Session
+from sqlalchemy.orm import Session
 
 
 def main():
-    """
-    lists all entries on the table state
-    that containes the letter a
-    """
-
     if len(argv) != 4:
         return
 
