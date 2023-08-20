@@ -13,6 +13,9 @@ def main():
     that containes the letter a
     """
 
+    if len(argv) != 4:
+        return
+
     engine = create_engine(
             f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
     Base.metadata.create_all(engine)
@@ -21,10 +24,14 @@ def main():
     states = (session.query(State)
               .filter(State.name.like('%a%'))
               .order_by(State.id))
-    counter = 1
-    for state in states:
-        print(f'{counter}: {state.name}')
-        counter += 1
+
+    if states:
+        counter = 1
+        for state in states:
+            print(f'{counter}: {state.name}')
+            counter += 1
+    else:
+        print('Nothing')
 
 
 if __name__ == '__main__':
