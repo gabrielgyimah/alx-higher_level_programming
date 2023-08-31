@@ -1,3 +1,3 @@
 #!/bin/bash
 # Sends a POST request to the passed URL
-curl -s -X POST -H "email: test@gmail.com" -H "subject: I will always be here for PLD" "$1"
+curl -sX POST -F "email: test@gmail.com" -F "subject: I will always be here for PLD" "$1"
