@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
-# Displays the size of the body of an HTTP response
+#!/bin/env bash
+# Displays response size only
 
-curl -I "$1" | grep -iF 'content-length' | cut -d " " -f 2
+curl -si "$1" | grep -iF "content-length" | cut -d " " -f 2
