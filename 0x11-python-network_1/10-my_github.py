@@ -19,4 +19,3 @@ if __name__ == '__main__':
     response = requests.get(url, auth=cred)
     data = response.json()
     print(data.get('id'))
-
