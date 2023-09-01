@@ -14,5 +14,5 @@ if __name__ == '__main__':
 
         print(body)
 
-    except error.HTTPErro as e:
+    except error.HTTPError as e:
         print(f'Error code: {e.code}')
