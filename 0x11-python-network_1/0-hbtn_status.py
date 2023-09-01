@@ -7,7 +7,8 @@ import urllib.request
 def main():
     """Fetches https://alx-intranet.hbtn.io/status"""
 
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
+    url = 'https://alx-intranet.hbtn.io/status'
+    with urllib.request.urlopen(url) as response:
         bytes = response.read()
         cntnt = f'content: {bytes}'
         res_type = f'type: {type(bytes)}'
