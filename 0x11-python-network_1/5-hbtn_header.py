@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Sends a request to the URL"""
 
-import requests, sys
+import requests
+import sys
 
 
 if __name__ == '__main__':
@@ -10,5 +11,5 @@ if __name__ == '__main__':
     """
 
     r = requests.get(sys.argv[1])
-    id = r.headers['X-Request-Id']
+    id = r.headers.get('X-Request-Id')
     print(id)
