@@ -8,7 +8,7 @@ import sys
 
 def main():
     """Sends a POST request to the passed URL"""
-    
+
     url = sys.argv[1]
     email = {'email': sys.argv[2]}
     data = urllib.parse.urlencode(email).encode('ascii')
