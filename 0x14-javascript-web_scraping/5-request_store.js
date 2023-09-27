@@ -2,15 +2,7 @@
 
 const request = require('request');
 const fs = require('fs');
+const url = process.argv[2];
+const file = process.argv[3];
 
-request.get(process.argv[2], (error, response, body) => {
-    if (!error && response.statusCode == 200) {
-        try {
-            fs.writeFileSync(process.argv[3], body, 'utf-8')
-        } catch (err) {
-            console.error(err)
-        }
-    } else {
-        console.error(error);
-    }
-})
+request(url.pipe(fs.createWriteStream(file)));
